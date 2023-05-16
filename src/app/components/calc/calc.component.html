@@ -1,0 +1,76 @@
+<div class="container my-5">
+  <div class="row justify-content-center">
+    <div class="col-md-4">
+      <div class="card">
+        <div class="card-body">
+          <input type="text" id="input" value="" [(ngModel)]="input" class="form-control mb-2" readonly>
+          <input type="text" id="result" value="" [(ngModel)]="result" class="form-control mb-2" readonly>
+          <div class="row">
+            <div class="col">
+              <button class="btn btn-secondary btn-block" (click)="onButtonClick('7')">7</button>
+            </div>
+            <div class="col">
+              <button class="btn btn-secondary btn-block" (click)="onButtonClick('8')">8</button>
+            </div>
+            <div class="col">
+              <button class="btn btn-secondary btn-block" (click)="onButtonClick('9')">9</button>
+            </div>
+            <div class="col">
+              <button class="btn btn-warning btn-block" (click)="onButtonClick('/')">/</button>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col">
+              <button class="btn btn-secondary btn-block" (click)="onButtonClick('4')">4</button>
+            </div>
+            <div class="col">
+              <button class="btn btn-secondary btn-block" (click)="onButtonClick('5')">5</button>
+            </div>
+            <div class="col">
+              <button class="btn btn-secondary btn-block" (click)="onButtonClick('6')">6</button>
+            </div>
+            <div class="col">
+              <button class="btn btn-warning btn-block" (click)="onButtonClick('*')">*</button>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col">
+              <button class="btn btn-secondary btn-block" (click)="onButtonClick('1')">1</button>
+            </div>
+            <div class="col">
+              <button class="btn btn-secondary btn-block" (click)="onButtonClick('2')">2</button>
+            </div>
+            <div class="col">
+              <button class="btn btn-secondary btn-block" (click)="onButtonClick('3')">3</button>
+            </div>
+            <div class="col">
+              <button class="btn btn-warning btn-block" (click)="onButtonClick('-')">-</button>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col">
+              <button class="btn btn-secondary btn-block" (click)="onButtonClick('0')">0</button>
+            </div>
+            <div class="col">
+              <button class="btn btn-secondary btn-block" (click)="onButtonClick('.')">.</button>
+            </div>
+            <div class="col">
+              <button class="btn btn-warning btn-block" (click)="onButtonClick('%')">%</button>
+            </div>
+            <div class="col">
+              <button class="btn btn-warning btn-block" (click)="onButtonClick('+')">+</button>
+            </div>
+          </div>
+          <div class="row">
+              <div class="col">
+                  <button class="btn btn-danger btn-block" (click)="onButtonClick('C')">C</button>
+              </div>
+              <div class="col">
+                  <button class="btn btn-danger btn-block" (click)="onButtonClick('X')">X</button>
+              </div>
+          </div>
+         </div>
+        </div>
+      </div>
+  </div>
+</div>

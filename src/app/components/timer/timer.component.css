@@ -1,0 +1,51 @@
+.timer-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+  }
+
+  .timer-box {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 2rem;
+    border: 5px solid black;
+    border-radius: 10px;
+  }
+  .circle-border {
+    width: 200px;
+    height: 200px;
+    border: 5px solid lavenderblush;
+    border-radius: 50%;
+    padding: 11rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(160deg, purple, pink);
+    /* background: purple; */
+  }
+
+  .circle-border h1 {
+    font-size: 4rem;
+    font-weight: bold;
+    color: lavender;
+  }
+
+  .timer-buttons {
+    display: flex;
+    justify-content: center;
+    margin-top: 1rem;
+  }
+
+  .timer-buttons button {
+    margin: 0 1rem;
+    background-color: #FFB6C1;
+    color: black;
+  }
+
+  .timer-buttons button:hover {
+    background-color: #FF8090;
+  }
