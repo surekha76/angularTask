@@ -31,8 +31,8 @@
   .btn-danger {
     background-color: #e74a3b;
     border-color: #e74a3b;
-    border-radius: 10px;
-    --bs-btn-padding-x: 63px;
+    /* border-radius: 10px; */
+    /* --bs-btn-padding-x: 34px; */
   }
   
   .btn-danger:hover {

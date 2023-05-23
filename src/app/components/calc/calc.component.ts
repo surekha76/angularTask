@@ -14,20 +14,29 @@ export class CalcComponent implements OnInit {
   result: string = '';
   input: string = '';
 
-  onButtonClick(value: string) {
-   if (value === 'C') {
-      this.result = '';
-      this.input = '';
-    } else if (value === 'X'){
-      if (this.input !="" ) {
-        this.input = this.input.substr(0, this.input.length-1);
-      }
-      if (this.result !=""){
-        this.result = eval(this.input); 
-      }
-    } else {
-      this.input += value;
+  onKeyPress(event: KeyboardEvent) {
+    const input = event.key;
+    const regex = /^[\d\(\)\-+*/%.]+$/m;
+    if (!regex.test(input)) {
+      event.preventDefault();
+    }
+    if (input == '=') {
       this.result = eval(this.input);
     }
+  }
+
+  onButtonClick(value: string) {
+    if (value == '='){
+      this.result = eval(this.input);
+    } else {
+      this.input += value;
+    }
+  }
+  clear(){
+    this.result = '';
+    this.input = '';
+  }
+  delete(){
+    this.input = this.input.slice(0, -1);
   }
 }

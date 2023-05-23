@@ -10,10 +10,12 @@ export class TimerComponent implements OnInit {
   timerValue: number = 0;
   private timerSubscription: Subscription;
   timerRunning: boolean = true;
+  disable: boolean = false;
 
   ngOnInit() {
   }
   start(){
+   this.disable = true;
     this.timerSubscription = interval(1000).subscribe(() => {
       if(this.timerRunning){
         this.timerValue++;
@@ -39,6 +41,7 @@ export class TimerComponent implements OnInit {
       this.timerSubscription.unsubscribe();
       this.timerRunning = true;
       this.timerValue = 0 ;
+      this.disable = false;
     }
   }
 

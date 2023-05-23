@@ -6,6 +6,8 @@ import { AppComponent } from './app.component';
 import { FormsModule } from '@angular/forms';
 import { TimerComponent } from './components/timer/timer.component';
 import { CalcComponent } from './components/calc/calc.component';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { MatIconModule } from '@angular/material/icon';
 
 
 @NgModule({
@@ -17,7 +19,9 @@ import { CalcComponent } from './components/calc/calc.component';
   imports: [
     BrowserModule,
     AppRoutingModule,
-    FormsModule
+    FormsModule,
+    BrowserAnimationsModule,
+    MatIconModule
   ],
   providers: [],
   bootstrap: [AppComponent]

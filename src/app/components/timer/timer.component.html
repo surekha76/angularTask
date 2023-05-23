@@ -5,7 +5,7 @@
         <div class="circle-border">
           <h1 id="countdown">{{timerValue}}</h1>
           <div class="timer-buttons">
-            <button id="start" class="btn" (click)="start()" *ngIf="timerRunning">Start</button>
+            <button id="start" class="btn" (click)="start()" *ngIf="timerRunning" [disabled]="disable">Start</button>
             <button id="resume" class="btn" (click)="pause()" *ngIf="!timerRunning">Resume</button>
             <button id="pause" class="btn" (click)="pause()">Pause</button>
             <button id="stop" class="btn" (click)="stop()">Stop</button>

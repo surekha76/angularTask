@@ -3,7 +3,7 @@
     <div class="col-md-4">
       <div class="card">
         <div class="card-body">
-          <input type="text" id="input" value="" [(ngModel)]="input" class="form-control mb-2" readonly>
+          <input type="text" id="input" value="" [(ngModel)]="input" class="form-control mb-2" (keypress)="onKeyPress($event)">
           <input type="text" id="result" value="" [(ngModel)]="result" class="form-control mb-2" readonly>
           <div class="row">
             <div class="col">
@@ -63,11 +63,17 @@
           </div>
           <div class="row">
               <div class="col">
-                  <button class="btn btn-danger btn-block" (click)="onButtonClick('C')">C</button>
+                  <button class="btn btn-danger btn-block" (click)="clear()">C</button>
               </div>
               <div class="col">
-                  <button class="btn btn-danger btn-block" (click)="onButtonClick('X')">X</button>
+                  <button class="btn btn-danger btn-block" (click)="delete()"><mat-icon>backspace</mat-icon></button>
               </div>
+              <div class="col">
+                <button class="btn btn-danger btn-block" (click)="onButtonClick('=')">=</button>
+            </div>
+            <div class="col">
+              <button class="btn btn-danger btn-block" routerLink="/timer"><mat-icon>timer</mat-icon></button>
+          </div>
           </div>
          </div>
         </div>
